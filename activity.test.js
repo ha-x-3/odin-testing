@@ -29,3 +29,9 @@ test('multiplies two numbers', () => {
 test('divides two numbers', () => {
     expect(calculator.divide(12, 3)).toBe(4);
 });
+
+test('returns a given string shifted by a given shift factor', () => {
+    expect(caesarCipher('xyz', 3)).toBe('abc');
+    expect(caesarCipher('HeLLo', 3)).toBe('KhOOr');
+    expect(caesarCipher('Hello, World!', 3)).toBe('Khoor, Zruog!');
+});
