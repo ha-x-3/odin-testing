@@ -2,7 +2,8 @@ const {
     capitalize,
     reverseString,
     calculator,
-    caesarCipher
+    caesarCipher,
+    analyzeArray
  } = require('./activity');
 
 test('capitalizes first character of given string', () => {
@@ -34,4 +35,12 @@ test('returns a given string shifted by a given shift factor', () => {
     expect(caesarCipher('xyz', 3)).toBe('abc');
     expect(caesarCipher('HeLLo', 3)).toBe('KhOOr');
     expect(caesarCipher('Hello, World!', 3)).toBe('Khoor, Zruog!');
+});
+
+test('returns an object that contains the average, min, max, and length of a given array', () => {
+    const array = analyzeArray([1, 8, 3, 4, 2, 6]);
+    expect(array.average).toBe(4);
+    expect(array.min).toBe(1);
+    expect(array.max).toBe(8);
+    expect(array.length).toBe(6);
 });
